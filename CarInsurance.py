@@ -37,3 +37,16 @@ input_data = pd.DataFrame({'CLAIM_FLAG': [CLAIM_FLAG],'BLUEBOOK': [BLUEBOOK],'IN
 if st.button("Predict"):
     prediction = model.predict(input_data)
     st.write(f"The predicted car insurance outcome is: {prediction[0]}")
+
+st.sidebar.title("Glossary terms and definitions:")
+st.sidebar.write("**Income**: Please enter your Annual Income in Rupees")
+st.sidebar.write("**Home value**: Please enter your Home value in Rupees")
+st.sidebar.write("**Claim Flag**: Select 1 if Claim Made else select 0")
+st.sidebar.write("**Car Age**: Please enter the Age of your car in years")
+st.sidebar.write("**YOJ value**: Years on Job - this value helps assess the stability or reliability of your income")
+st.sidebar.write("**MVR_PTS value**: Motor Vehicle Record Points - this is the points accumulated on a driver’s record due to traffic violations or driving infractions")
+st.sidebar.write("**Claim frequency**: The no. of claims received previously")
+st.sidebar.write("**TIF value**: Time in Force. This metric indicates how long you held your current insurance policy in terms of years")
+st.sidebar.write("**Bluebook value**: refers to the estimated market value of a car, often sourced from resources like the Kelley Blue Book in Rupees")
+st.sidebar.write("**Old Claim Amount**: The claim amount you received previously in Rupees")
+st.sidebar.write("**Travel time of car**: Approximate time of travel in years")
